@@ -1,0 +1,16 @@
+{
+  "domainDnsName": "democorp.test",
+  "organizationalUnit": "OU=LabUsers,DC=democorp,DC=test",
+  "groupsByDepartment": {
+    "IT": ["GG-IT-Standard"],
+    "HR": ["GG-HR-Standard"],
+    "Finance": ["GG-Finance-Standard"],
+    "Operations": ["GG-Operations-Standard"]
+  },
+  "managedGroups": [
+    "GG-IT-Standard",
+    "GG-HR-Standard",
+    "GG-Finance-Standard",
+    "GG-Operations-Standard"
+  ]
+}
