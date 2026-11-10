@@ -1,0 +1,25 @@
+name: PowerShell mock-lab tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check PowerShell
+        shell: pwsh
+        run: $PSVersionTable.PSVersion.ToString()
+
+      - name: Run offline mock-lab tests
+        shell: pwsh
+        run: ./tests/Run-Tests.ps1
